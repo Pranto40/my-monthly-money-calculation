@@ -25,29 +25,29 @@
                 <h2 class="text-center">Income</h2>
                 <div class="input-group text-center">
                   <label>Income</label>
-                  <input class="form-control" type="text" placeholder="">
+                  <input id="income" class="form-control" type="number" placeholder="">
                 </div>
                 <h3 class="text-center">Expenses</h3>
                 <div class="input-group">
                   <label>Food:</label>
-                  <input class="form-control" type="tel" placeholder="">
+                  <input id="food" class="form-control" type="number" placeholder="">
                 </div>
           
                 <div class="input-group">
                   <label>Rent:</label>
-                  <input class="form-control" type="email" placeholder="">
+                  <input id="rent" class="form-control" type="number" placeholder="">
                 </div>   
           
                 <div class="input-group">
                   <label>Clothes:</label>
-                  <input class="form-control" type="email" placeholder=""></input>
+                  <input id="clothes" class="form-control" type="number" placeholder=""></input>
                 </div>
-              <button class="m-auto my-4">Calculate</button>
-              <h4 class="my-3">Total Expenses:</h4>
+              <button onclick="calculate()" class="m-auto my-4">Calculate</button>
+              <h4 class="my-3">Total Expenses: <span id="total-expense"></span></h4>
               <h4>Balance:</h4>
               <div class="d-flex align-items-center justify-content-center my-3">
                 <h4 class="me-3 mt-1">Save:</h4>
-                <input type="text">
+                <input type="number">
                 <h4 class="mx-3 mt-1">%</h4>
                 <button>Save</button>
               </div>
