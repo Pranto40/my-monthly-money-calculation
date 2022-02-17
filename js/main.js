@@ -1,3 +1,4 @@
+
 window.onload  = () => {
     main ();
 };
@@ -7,7 +8,6 @@ window.onload  = () => {
     let clothes = parseInt(document.getElementById('clothes').value);
     let calculatebtn = document.getElementById('calculate');
     
-
     // calculation a total balance
     let totalBlance = income - (food + rent + clothes);
 
@@ -15,18 +15,17 @@ window.onload  = () => {
 function main () {
     calculatebtn.addEventListener('click', function () {
         // error condition
-       
         if (isNaN(food) || food < 0){
             let foodError = document.getElementById('food-error');
-            foodError.innerHTML = 'please enter the positive number on the food';
+            foodError.innerHTML = 'please enter the number on the food';
         }
         else if (isNaN(rent) || rent < 0) {
             let foodError = document.getElementById('rent-error');
-            foodError.innerHTML = 'please enter the positive number on the rent';
+            foodError.innerHTML = 'please enter the number on the rent';
         }
         else if (isNaN(clothes) || clothes < 0) {
             let foodError = document.getElementById('clothes-error');
-            foodError.innerHTML = 'please enter the positive number on the clothes';
+            foodError.innerHTML = 'please enter the number on the clothes';
         }
         else {
             // calculation a total expense
@@ -37,11 +36,11 @@ function main () {
             document.getElementById('balance').innerHTML = totalBlance;
             if (isNaN(income) || income < 0) {
                 let incomeError = document.getElementById('income-error');
-                incomeError.innerHTML = 'please enter the positive number on the income';
+                incomeError.innerHTML = 'please enter the number on the income';
             }
             else if (income < totalExpense) {
                 let balanceError = document.getElementById('balance-error');
-                balanceError.innerHTML = 'your amount low';
+                balanceError.innerHTML = 'You have overcharged';
                 }
             }
     });
