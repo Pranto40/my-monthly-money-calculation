@@ -2,28 +2,29 @@ window.onload  = () => {
     main ();
 };
     let income = parseInt(document.getElementById('income').value);
-    let calculatebtn = document.getElementById('calculate');
     let food = parseInt(document.getElementById('food').value);
     let rent = parseInt(document.getElementById('rent').value);
     let clothes = parseInt(document.getElementById('clothes').value);
+    let calculatebtn = document.getElementById('calculate');
+    
 
     // calculation a total balance
     let totalBlance = income - (food + rent + clothes);
 
     // calculate button addEventListener handle and function decleare
 function main () {
-     
     calculatebtn.addEventListener('click', function () {
         // error condition
-        if (food < 0){
+       
+        if (isNaN(food) || food < 0){
             let foodError = document.getElementById('food-error');
             foodError.innerHTML = 'please enter the positive number on the food';
         }
-        else if (rent < 0) {
+        else if (isNaN(rent) || rent < 0) {
             let foodError = document.getElementById('rent-error');
             foodError.innerHTML = 'please enter the positive number on the rent';
         }
-        else if (clothes < 0) {
+        else if (isNaN(clothes) || clothes < 0) {
             let foodError = document.getElementById('clothes-error');
             foodError.innerHTML = 'please enter the positive number on the clothes';
         }
@@ -34,7 +35,7 @@ function main () {
 
             let income = parseInt(document.getElementById('income').value);
             document.getElementById('balance').innerHTML = totalBlance;
-            if (income < 0) {
+            if (isNaN(income) || income < 0) {
                 let incomeError = document.getElementById('income-error');
                 incomeError.innerHTML = 'please enter the positive number on the income';
             }
@@ -60,6 +61,7 @@ document.getElementById('saveButton').addEventListener('click', function () {
         savingError.innerHTML = 'your balance low you not saving money';
     }
 });
+
 
 
 
