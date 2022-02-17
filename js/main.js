@@ -49,12 +49,16 @@ function main () {
 // save button addEventListener handle and function decleare
 document.getElementById('saveButton').addEventListener('click', function () {
     let persentesValue = parseInt(document.getElementById('persentes-value').value);
-    let calculateValue = income / persentesValue;
+    let calculateValue = income * (persentesValue/100);
     document.getElementById('saving-amount').innerHTML = calculateValue;
 
     let remainingBalance = totalBlance - calculateValue;
     document.getElementById('remaining-balance').innerHTML = remainingBalance;
 
+    if (totalBlance < calculateValue) {
+        let savingError = document.getElementById('saving-error');
+        savingError.innerHTML = 'your balance low you not saving money';
+    }
 });
 
 

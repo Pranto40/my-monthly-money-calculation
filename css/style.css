@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 span {
     color: rgb(238, 85, 25);
 }
@@ -16,6 +15,7 @@ span {
     border-radius: 4px;
     background-color: #e7ebf8;
     position: relative;
+    margin-top: 40px;
 }
 
 .input-group {
