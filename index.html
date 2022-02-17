@@ -22,11 +22,13 @@
           </div>
           <div class="col-lg-6">
             <div class="text-center form">
+
                 <h2 class="text-center">Income</h2>
                 <div class="input-group text-center">
                   <label>Income</label>
                   <input id="income" class="form-control" type="number" placeholder="">
                 </div>
+                
                 <h3 class="text-center">Expenses</h3>
                 <div class="input-group">
                   <label>Food:</label>
@@ -42,15 +44,18 @@
                   <label>Clothes:</label>
                   <input id="clothes" class="form-control" type="number" placeholder=""></input>
                 </div>
-              <button onclick="calculate()" class="m-auto my-4">Calculate</button>
+
+              <button id="calculate" class="m-auto my-4">Calculate</button>
               <h4 class="my-3">Total Expenses: <span id="total-expense"></span></h4>
-              <h4>Balance:</h4>
+              <h4>Balance: <span id="balance"></span></h4>
+
               <div class="d-flex align-items-center justify-content-center my-3">
                 <h4 class="me-3 mt-1">Save:</h4>
                 <input type="number">
                 <h4 class="mx-3 mt-1">%</h4>
-                <button>Save</button>
+                <button onclick="saveButton()">Save</button>
               </div>
+
               <h4 class="my-4">saving Amount:</h4>
               <h4>Remaining Balance:</h4>
             </div>
